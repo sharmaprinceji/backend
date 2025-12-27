@@ -46,7 +46,7 @@ const registerChatSocket = (io) => {
         });
 
         socket.on("leave-room", ({ roomId }) => {
-            console.log("remove--->",roomId, socket.id)
+            // console.log("remove--->",roomId, socket.id)
             socket.leave(roomId);
             socket.to(roomId).emit("user-left", socket.id);
         });
