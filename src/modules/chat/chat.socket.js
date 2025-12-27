@@ -25,7 +25,7 @@ const registerChatSocket = (io) => {
 
         socket.on("join-room", ({ roomId }) => {
             socket.join(roomId);
-            console.log('56----->',roomId,socket.id)
+           // console.log('56----->',roomId,socket.id)
             socket.to(roomId).emit("user-joined", socket.id);
         });
 
