@@ -4,8 +4,10 @@ let io;
 
 export const initSocket = (httpServer) => {
   io = new Server(httpServer, {
+    path: "/socket.io",     // ✅ IMPORTANT
     cors: {
       origin: "*",
+      methods: ["GET", "POST"],
     },
   });
 
