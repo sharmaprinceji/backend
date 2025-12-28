@@ -1,6 +1,6 @@
 const registerWebRTCSocket = (io) => {
   io.on("connection", (socket) => {
-    console.log("🎥 WebRTC Socket Connected:", socket.id);
+    console.log(" WebRTC Socket Connected:", socket.id);
 
     socket.on("join-video-room", ({ roomId }) => {
       socket.join(roomId);

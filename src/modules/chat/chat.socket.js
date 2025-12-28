@@ -51,7 +51,6 @@ const registerChatSocket = (io) => {
             socket.to(roomId).emit("user-left", socket.id);
         });
 
-
         socket.on("disconnect", () => {
             console.log("Socket disconnected:", socket.id);
         });
